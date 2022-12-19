@@ -39,12 +39,16 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-    
+        
+      - run: pwd
+        
       - uses: actions/download-artifact@master
         with:
           name: repo-path
           path: trunk/
       - run: ls -la trunk/
+      - run: pwd
+      
       
       #commit the code to git repo : https://github.com/marketplace/actions/add-commit
       - uses: EndBug/add-and-commit@v9
