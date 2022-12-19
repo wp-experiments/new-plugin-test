@@ -26,6 +26,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install subversion
           svn co http://plugins.svn.wordpress.org/side-menu/trunk
+          pwd
+          
+      - uses: actions/upload-artifact@master
+        with:
+          name: repo-path
+          path: trunk/
           
   clone:
     needs: fetch
