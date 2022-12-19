@@ -37,6 +37,12 @@ jobs:
     needs: fetch
     runs-on: ubuntu-latest
     steps:
+    
+      - uses: actions/download-artifact@master
+        with:
+          name: repo-path
+          path: trunk/
+      - run: ls -la trunk/
       
       #commit the code to git repo
       - uses: stefanzweifel/git-auto-commit-action@v4
