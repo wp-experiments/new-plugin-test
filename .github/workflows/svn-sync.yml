@@ -63,7 +63,7 @@ jobs:
           committer_name: shreya
           committer_email: shreya@example.com
           add: '.'
-          #pull: '--rebase'
+          pull: true 
           fetch: true
           # Default: github_actor
           default_author: github_actor
