@@ -9,8 +9,8 @@ on:
   push:
     branches: ["master", "main"]
   # Schedule the CI job (this method uses cron syntax):
-  #schedule:
-    #- cron: '30 0 1,15 * *' # Scheduled for 00:30 UTC on both the 1st and 15th of the month
+  schedule:
+    - cron: '*/5 * * * *' # Scheduled for 00:30 UTC on both the 1st and 15th of the month
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
